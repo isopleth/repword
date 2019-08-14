@@ -59,7 +59,7 @@ auto main(int argc, char** argv) -> int {
 
   // For each file provided in the command line
   for (auto&& index = 1; index < argc; index++){
-    auto file = ifstream(argv[index]);
+    auto file = ifstream{argv[index]};
     if (file.is_open()) {
       auto line = string{};
       auto firstWord = false;
